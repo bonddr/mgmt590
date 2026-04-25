@@ -3,18 +3,18 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 def generate_task3_master_report():
-    # 1. Load Data (Read-Only)
+    # Load Data (Read files)
     hm_df = pd.read_csv('data/raw/hm_benchmarks_2026.csv')
     zara_df = pd.read_csv('data/raw/zara_benchmarks_2026.csv')
 
-    # 2. Standardize Names for the entire script
+    # Standardize Names for the entire script
     hm_df = hm_df.rename(columns={'productName': 'name', 'colorName': 'color_col'})
     zara_df = zara_df.rename(columns={'display_name': 'name', 'available_color_names': 'color_col'})
     
     hm_df['Brand'] = 'H&M (Mass Market)'
     zara_df['Brand'] = 'Zara (Premium Trend)'
 
-    # --- GRAPH 1: Price Architecture (Positioning) ---
+    # GRAPH 1: Price Architecture (Positioning) 
     plt.figure(figsize=(10, 6))
     combined = pd.concat([hm_df[['price', 'Brand']], zara_df[['price', 'Brand']]])
     sns.boxplot(x='Brand', y='price', data=combined, hue='Brand', palette=['#003d7c', '#da291c'], legend=False)
@@ -23,7 +23,7 @@ def generate_task3_master_report():
     plt.savefig('outputs/charts/price_architecture.png')
     plt.close() # Clean up memory
 
-    # --- GRAPH 2: Color Strategy  ---
+    # GRAPH 2: Color Strategy 
     fig2, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, 9))
     
     # H&M Colors
@@ -44,7 +44,7 @@ def generate_task3_master_report():
     plt.savefig('outputs/charts/color_strategy_comparison.png')
     plt.close()
 
-    # --- GRAPH 3: Style DNA (Keyword Frequency) ---
+    # GRAPH 3: Style DNA (Keyword Frequency)
     def get_keywords(df):
         # Filters out brands and filler words to show actual styles
         words = df['name'].str.lower().str.split(expand=True).stack().value_counts()
@@ -59,7 +59,7 @@ def generate_task3_master_report():
     plt.savefig('outputs/charts/style_dna_final.png')
     plt.close()
     
-    print("\n--- STRATEGIC ANALYSIS COMPLETE ---")
+    print("\n STRATEGIC ANALYSIS COMPLETE")
     print("1. Price Architecture -> outputs/charts/price_architecture.png")
     print("2. Color Strategy    -> outputs/charts/color_strategy_comparison.png")
     print("3. Style DNA         -> outputs/charts/style_dna_final.png")
