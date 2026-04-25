@@ -5,7 +5,7 @@ import pandas as pd
 client = ApifyClient("")
 
 def scrape_diverse_benchmark(brand_name, actor_id, url):
-    print(f"\n--- Scraping {brand_name} 2026 Strategy Data (50 Items) ---")
+    print(f"\n Scraping {brand_name} 2026 Strategy Data (50 Items)")
     
     # Using 'startUrl' as the standard for these actors
     run_input = {
@@ -24,7 +24,7 @@ def scrape_diverse_benchmark(brand_name, actor_id, url):
     df.to_csv(file_path, index=False)
     print(f"Success! {len(df)} diverse items saved to: {file_path}")
 
-# --- STRATEGIC EXECUTION ---
+#  STRATEGIC EXECUTION
 
 # 1. ZARA: Premium Trends (Dresses, Outerwear, Tailoring)
 scrape_diverse_benchmark(
