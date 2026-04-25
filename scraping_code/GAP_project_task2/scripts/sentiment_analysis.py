@@ -11,7 +11,7 @@ def analyze_sentiment_cleaned(text):
     # Convert to string and lowercase
     text = str(text).lower()
     
-    # 1. CLEANING: Remove encoding artifacts like â€™ and noise fragments
+    # 1. CLEANING: Remove encoding artifacts and noise fragments
     # This helps fix the 'neutral' scores caused by messy text
     text = text.encode('ascii', 'ignore').decode('ascii')
     
@@ -41,7 +41,7 @@ try:
     # Combine for Task 3 Comparative Analysis
     combined_df = pd.concat([df_www[['text_content', 'source']], df_js[['text_content', 'source']]], ignore_index=True)
 
-    # --- UPDATED ANALYSIS STEP ---
+    # UPDATED ANALYSIS STEP 
     # Apply the cleaned analysis function
     combined_df['sentiment_score'] = combined_df['text_content'].apply(analyze_sentiment_cleaned)
     
@@ -53,7 +53,7 @@ try:
 
     # Generate Insights for Presentation
     summary = final_df.groupby('source')['sentiment_score'].mean()
-    print("\n--- Average Sentiment by Source (Cleaned) ---")
+    print("\n Average Sentiment by Source (Cleaned)")
     print(summary)
 
     # Save for Final Project Deliverables
