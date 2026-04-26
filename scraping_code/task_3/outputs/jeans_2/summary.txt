@@ -9,9 +9,8 @@ Summary:
 Market analysis reveals 'jeans' trending with jeans essentials, neutral jeans, navy palette. Dominant palette features neutral, navy, black with cotton, polyester. Overall aesthetic: casual, versatile. Each brand interpretation balances AI-detected market trends with signature brand identity.
 
 Data Sources:
-  - Pinterest: 12 items
+
   - Zara: 10 items
-  - Uniqlo: 10 items
   - Vogue: 2 items
 
 Trend Analysis:
