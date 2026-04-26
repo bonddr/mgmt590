@@ -9,9 +9,7 @@ Summary:
 Market analysis reveals 'denim jacket' trending with denim jacket essentials, neutral denim jacket, navy palette. Dominant palette features neutral, navy, black with denim, cotton. Overall aesthetic: casual, versatile. Each brand interpretation balances AI-detected market trends with signature brand identity.
 
 Data Sources:
-  - Pinterest: 12 items
   - Zara: 10 items
-  - Uniqlo: 10 items
   - Vogue: 3 items
 
 Trend Analysis:
