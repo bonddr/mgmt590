@@ -9,9 +9,8 @@ Summary:
 Market analysis reveals 'tshirt' trending with tshirt essentials, neutral tshirt, navy palette. Dominant palette features neutral, navy, black with cotton, polyester. Overall aesthetic: modern, stylish. Each brand interpretation balances AI-detected market trends with signature brand identity.
 
 Data Sources:
-  - Pinterest: 12 items
+
   - Zara: 10 items
-  - Uniqlo: 10 items
   - Vogue: 1 items
 
 Trend Analysis:
